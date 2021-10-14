@@ -75,7 +75,7 @@ public class ParserTests {
     @Test
     void testParseIntTwentyFourThousandFortyTwoString() {
         String numberString = "twenty four thousand forty two";
-        assertEquals(42042, Parser.parseInt(numberString));
+        assertEquals(24042, Parser.parseInt(numberString));
     }
 
     @Test
@@ -86,7 +86,7 @@ public class ParserTests {
 
     @Test
     void testParseIntOneMillionString() {
-        String numberString = "four thousand six hundred fifty-eight";
-        assertEquals(100, Parser.parseInt(numberString));
+        String numberString = "one million";
+        assertEquals(1000000, Parser.parseInt(numberString));
     }
 }
