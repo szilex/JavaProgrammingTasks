@@ -45,55 +45,40 @@ public enum NumberString {
     }
 
     public static int calculateValue(String[] valueStringArray) {
-        int result = 0;
         List<String> formattedNumberList = new ArrayList<>(Arrays.asList(valueStringArray));
         ListIterator<String> listIterator = formattedNumberList.listIterator();
+        int result = 0;
+        int partialSum=0;
+        boolean hundredOccurred = false;
         while(listIterator.hasNext()) {
-            int partialSum=0;
-            loop: while(listIterator.hasNext()) {
-                String value = listIterator.next().toUpperCase();
-                switch (NumberString.valueOf(value)) {
-                    case HUNDRED: {
-                        if (partialSum == 0) {
-                            partialSum = HUNDRED.value;
-                        } else {
-                            partialSum *= HUNDRED.value;
-                        }
-                        int offset = 0;
-                        while(listIterator.hasNext()) {
-                            offset++;
-                            String tempValue = listIterator.next();
-                            if (NumberString.valueOf(tempValue.toUpperCase()).equals(THOUSAND)) {
-                                partialSum *= THOUSAND.value;
-                            }
-                        }
-                        for (; offset>0; offset--) {
-                            listIterator.previous();
-                        }
-                        break loop;
-                    }
-                    case THOUSAND: {
-                        if (partialSum == 0) {
-                            partialSum = THOUSAND.value;
-                        } else {
-                            partialSum *= THOUSAND.value;
-                        }
-                        break loop;
-                    }
-                    case MILLION: {
-                        if (partialSum == 0) {
-                            partialSum = MILLION.value;
-                        } else {
-                            partialSum *= MILLION.value;
-                        }
-                        break loop;
-                    }
-                    default:
-                        partialSum += NumberString.valueOf(value).value;
+            String value = listIterator.next().toUpperCase();
+            switch (NumberString.valueOf(value)) {
+                case HUNDRED: {
+                    result += partialSum * HUNDRED.value;
+                    hundredOccurred = true;
+                    partialSum = 0;
+                    break;
                 }
+                case THOUSAND: {
+                    if (hundredOccurred) {
+                        result = (result + partialSum) * THOUSAND.value;
+                        hundredOccurred = false;
+                    } else {
+                        result += partialSum * THOUSAND.value;
+                    }
+                    partialSum = 0;
+                    break;
+                }
+                case MILLION: {
+                    result += partialSum * MILLION.value;
+                    partialSum = 0;
+                    break;
+                }
+                default:
+                    partialSum += NumberString.valueOf(value).value;
             }
-            result += partialSum;
         }
+        result += partialSum;
         return result;
     }
 }
