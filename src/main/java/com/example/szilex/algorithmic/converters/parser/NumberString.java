@@ -1,4 +1,4 @@
-package com.example.szilex.parser;
+package com.example.szilex.algorithmic.converters.parser;
 
 import java.util.ArrayList;
 import java.util.Arrays;

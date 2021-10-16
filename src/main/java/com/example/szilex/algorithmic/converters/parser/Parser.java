@@ -1,4 +1,4 @@
-package com.example.szilex.parser;
+package com.example.szilex.algorithmic.converters.parser;
 
 public class Parser {
     public static int parseInt(String numberString) {
