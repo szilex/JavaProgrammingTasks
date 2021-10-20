@@ -20,6 +20,31 @@ public class SpiralGeneratorTests {
     }
 
     @Test
+    public void testGetSpiralSizeSix() {
+        assertTrue(Arrays.deepEquals(new int[][] {
+                { 1, 1, 1, 1, 1, 1 },
+                { 0, 0, 0, 0, 0, 1 },
+                { 1, 1, 1, 1, 0, 1 },
+                { 1, 0, 0, 1, 0, 1 },
+                { 1, 0, 0, 0, 0, 1 },
+                { 1, 1, 1, 1, 1, 1 }
+        }, SpiralGenerator.getSpiral(6)));
+    }
+
+    @Test
+    public void testGetSpiralSizeSeven() {
+        assertTrue(Arrays.deepEquals(new int[][] {
+                { 1, 1, 1, 1, 1, 1, 1 },
+                { 0, 0, 0, 0, 0, 0, 1 },
+                { 1, 1, 1, 1, 1, 0, 1 },
+                { 1, 0, 0, 0, 1, 0, 1 },
+                { 1, 0, 1, 1, 1, 0, 1 },
+                { 1, 0, 0, 0, 0, 0, 1 },
+                { 1, 1, 1, 1, 1, 1, 1 },
+        }, SpiralGenerator.getSpiral(7)));
+    }
+
+    @Test
     public void testGetSpiralSizeEight() {
         assertTrue(Arrays.deepEquals(new int[][] {
                 { 1, 1, 1, 1, 1, 1, 1, 1 },
