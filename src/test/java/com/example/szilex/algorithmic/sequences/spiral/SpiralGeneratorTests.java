@@ -2,25 +2,26 @@ package com.example.szilex.algorithmic.sequences.spiral;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import java.util.Arrays;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class SpiralGeneratorTests {
 
     @Test
     public void testGetSpiralSizeFive() {
-        assertEquals(new int[][] {
+        assertTrue(Arrays.deepEquals(new int[][] {
                 { 1, 1, 1, 1, 1 },
                 { 0, 0, 0, 0, 1 },
                 { 1, 1, 1, 0, 1 },
                 { 1, 0, 0, 0, 1 },
                 { 1, 1, 1, 1, 1 }
-        }, SpiralGenerator.getSpiral(5));
+        }, SpiralGenerator.getSpiral(5)));
     }
 
     @Test
     public void testGetSpiralSizeEight() {
-        assertEquals(new int[][] {
+        assertTrue(Arrays.deepEquals(new int[][] {
                 { 1, 1, 1, 1, 1, 1, 1, 1 },
                 { 0, 0, 0, 0, 0, 0, 0, 1 },
                 { 1, 1, 1, 1, 1, 1, 0, 1 },
@@ -29,7 +30,7 @@ public class SpiralGeneratorTests {
                 { 1, 0, 1, 1, 1, 1, 0, 1 },
                 { 1, 0, 0, 0, 0, 0, 0, 1 },
                 { 1, 1, 1, 1, 1, 1, 1, 1 },
-        }, SpiralGenerator.getSpiral(8));
+        }, SpiralGenerator.getSpiral(8)));
     }
 
     @Test
