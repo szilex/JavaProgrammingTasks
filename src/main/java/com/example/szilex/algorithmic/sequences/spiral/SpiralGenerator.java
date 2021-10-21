@@ -18,11 +18,10 @@ public class SpiralGenerator {
         int rowIndex = 0, columnIndex = 0;
         int rowIndexLowerBound = 2, columnIndexLowerBound = 0;
         int rowIndexUpperBound = n - 1, columnIndexUpperBound = n - 1;
-        int cellAmount = n * n;
+        boolean isSpiralFinished = false;
         SpiralDirection currentDirection = SpiralDirection.RIGHT;
 
-        for (int i = 0; i < cellAmount; i++) {
-            System.out.println("Index: " + rowIndex + "," + columnIndex);
+        while(!isSpiralFinished) {
             result[rowIndex][columnIndex] = 1;
             switch (currentDirection) {
                 case RIGHT:
@@ -66,7 +65,7 @@ public class SpiralGenerator {
                 if (n % 2 == 0) {
                     result[rowIndex][columnIndex] = 1;
                 }
-                break;
+                isSpiralFinished = true;
             }
         }
         return result;
