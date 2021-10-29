@@ -8,8 +8,13 @@ import java.math.BigInteger;
 public class NumberPatternUtilsTests {
 
     @Test
+    public void testExponentEqualZero() {
+        Assertions.assertEquals(BigInteger.ONE, NumberPatternUtils.countAllIncreasingOrDecreasingValues(0));
+    }
+
+    @Test
     public void testExponentEqualOne() {
-        Assertions.assertEquals(BigInteger.ONE, NumberPatternUtils.countAllIncreasingOrDecreasingValues(1));
+        Assertions.assertEquals(BigInteger.TEN, NumberPatternUtils.countAllIncreasingOrDecreasingValues(1));
     }
 
     @Test
