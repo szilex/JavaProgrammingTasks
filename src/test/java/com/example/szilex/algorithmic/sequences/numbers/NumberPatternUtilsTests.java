@@ -19,7 +19,7 @@ public class NumberPatternUtilsTests {
 
     @Test
     public void testExponentEqualTwo() {
-        Assertions.assertEquals(BigInteger.TEN, NumberPatternUtils.countAllIncreasingOrDecreasingValues(2));
+        Assertions.assertEquals(BigInteger.valueOf(100), NumberPatternUtils.countAllIncreasingOrDecreasingValues(2));
     }
 
     @Test
