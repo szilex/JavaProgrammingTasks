@@ -77,7 +77,7 @@ public class RomanNumbersConverterConvertToIntegerTests {
 
     @Test
     public void testConvertToRomanValueOneHundredTwentyThree(){
-        Assertions.assertEquals(123, RomanNumbersConverter.convertToInteger("XCIX"));
+        Assertions.assertEquals(123, RomanNumbersConverter.convertToInteger("CXXIII"));
     }
 
     @Test
@@ -87,7 +87,7 @@ public class RomanNumbersConverterConvertToIntegerTests {
 
     @Test
     public void testConvertToRomanValueFourHundredAndEightyFour(){
-        Assertions.assertEquals(484, RomanNumbersConverter.convertToInteger("CDLXXIV"));
+        Assertions.assertEquals(484, RomanNumbersConverter.convertToInteger("CDLXXXIV"));
     }
 
     @Test
@@ -132,7 +132,7 @@ public class RomanNumbersConverterConvertToIntegerTests {
 
     @Test
     public void testConvertToRomanValueTwoThousandThreeHundredAndFortyFive(){
-        Assertions.assertEquals(2345, RomanNumbersConverter.convertToInteger("MM"));
+        Assertions.assertEquals(2345, RomanNumbersConverter.convertToInteger("MMCCCXLV"));
     }
 
     @Test
