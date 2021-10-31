@@ -7,141 +7,141 @@ public class RomanNumbersConverterConvertToRomanTests {
 
     @Test
     public void testConvertToRomanValueOne(){
-        Assertions.assertEquals(1, RomanNumbersConverter.convertToInteger("I"));
+        Assertions.assertEquals("I", RomanNumbersConverter.convertToRoman(1));
     }
 
     @Test
     public void testConvertToRomanValueTwo(){
-        Assertions.assertEquals(2, RomanNumbersConverter.convertToInteger("II"));
+        Assertions.assertEquals("II", RomanNumbersConverter.convertToRoman(2));
     }
 
     @Test
     public void testConvertToRomanValueThree(){
-        Assertions.assertEquals(3, RomanNumbersConverter.convertToInteger("III"));
+        Assertions.assertEquals("III", RomanNumbersConverter.convertToRoman(3));
     }
 
     @Test
     public void testConvertToRomanValueFour(){
-        Assertions.assertEquals(4, RomanNumbersConverter.convertToInteger("IV"));
+        Assertions.assertEquals("IV", RomanNumbersConverter.convertToRoman(4));
     }
 
     @Test
     public void testConvertToRomanValueFive(){
-        Assertions.assertEquals(5, RomanNumbersConverter.convertToInteger("V"));
+        Assertions.assertEquals("V", RomanNumbersConverter.convertToRoman(5));
     }
 
     @Test
     public void testConvertToRomanValueSeven(){
-        Assertions.assertEquals(7, RomanNumbersConverter.convertToInteger("VII"));
+        Assertions.assertEquals("VII", RomanNumbersConverter.convertToRoman(7));
     }
 
     @Test
     public void testConvertToRomanValueNine(){
-        Assertions.assertEquals(9, RomanNumbersConverter.convertToInteger("IX"));
+        Assertions.assertEquals("IX", RomanNumbersConverter.convertToRoman(9));
     }
 
     @Test
     public void testConvertToRomanValueTen(){
-        Assertions.assertEquals(10, RomanNumbersConverter.convertToInteger("X"));
+        Assertions.assertEquals("X", RomanNumbersConverter.convertToRoman(10));
     }
 
     @Test
     public void testConvertToRomanValueFourteen(){
-        Assertions.assertEquals(14, RomanNumbersConverter.convertToInteger("XIV"));
+        Assertions.assertEquals("XIV", RomanNumbersConverter.convertToRoman(14));
     }
 
     @Test
     public void testConvertToRomanValueThirtySix(){
-        Assertions.assertEquals(36, RomanNumbersConverter.convertToInteger("XXXVI"));
+        Assertions.assertEquals("XXXVI", RomanNumbersConverter.convertToRoman(36));
     }
 
     @Test
     public void testConvertToRomanValueFortyTwo(){
-        Assertions.assertEquals(42, RomanNumbersConverter.convertToInteger("XLII"));
+        Assertions.assertEquals("XLII", RomanNumbersConverter.convertToRoman(42));
     }
 
     @Test
     public void testConvertToRomanValueSixtySix(){
-        Assertions.assertEquals(66, RomanNumbersConverter.convertToInteger("LXVI"));
+        Assertions.assertEquals("LXVI", RomanNumbersConverter.convertToRoman(66));
     }
 
     @Test
     public void testConvertToRomanValueNinetyNine(){
-        Assertions.assertEquals(99, RomanNumbersConverter.convertToInteger("XCIX"));
+        Assertions.assertEquals("XCIX", RomanNumbersConverter.convertToRoman(99));
     }
 
     @Test
     public void testConvertToRomanValueOneHundred(){
-        Assertions.assertEquals(100, RomanNumbersConverter.convertToInteger("C"));
+        Assertions.assertEquals("C", RomanNumbersConverter.convertToRoman(100));
     }
 
     @Test
-    public void testConvertToRomanValueOneHundredTwentyThree(){
-        Assertions.assertEquals(123, RomanNumbersConverter.convertToInteger("XCIX"));
+    public void testConvertToRomanValueOneHundredAndTwentyThree(){
+        Assertions.assertEquals("XCIX", RomanNumbersConverter.convertToRoman(123));
     }
 
     @Test
     public void testConvertToRomanValueFourHundredAndTwo(){
-        Assertions.assertEquals(402, RomanNumbersConverter.convertToInteger("CDII"));
+        Assertions.assertEquals("CDII", RomanNumbersConverter.convertToRoman(402));
     }
 
     @Test
     public void testConvertToRomanValueFourHundredAndEightyFour(){
-        Assertions.assertEquals(484, RomanNumbersConverter.convertToInteger("CDLXXIV"));
+        Assertions.assertEquals("CDLXXIV", RomanNumbersConverter.convertToRoman(484));
     }
 
     @Test
     public void testConvertToRomanValueFiveHundred(){
-        Assertions.assertEquals(500, RomanNumbersConverter.convertToInteger("D"));
+        Assertions.assertEquals("D", RomanNumbersConverter.convertToRoman(500));
     }
 
     @Test
     public void testConvertToRomanValueSixHundredThirtyOne(){
-        Assertions.assertEquals(631, RomanNumbersConverter.convertToInteger("DCXXXI"));
+        Assertions.assertEquals("DCXXXI", RomanNumbersConverter.convertToRoman(631));
     }
 
     @Test
     public void testConvertToRomanValueNineHundredNinetyEight(){
-        Assertions.assertEquals(998, RomanNumbersConverter.convertToInteger("CMXCVIII"));
+        Assertions.assertEquals("CMXCVIII", RomanNumbersConverter.convertToRoman(998));
     }
 
     @Test
     public void testConvertToRomanValueOneThousand(){
-        Assertions.assertEquals(1000, RomanNumbersConverter.convertToInteger("M"));
+        Assertions.assertEquals("M", RomanNumbersConverter.convertToRoman(1000));
     }
 
     @Test
     public void testConvertToRomanValueOneThousandTwoHundredAndThirtyFour(){
-        Assertions.assertEquals(1234, RomanNumbersConverter.convertToInteger("MCCXXXIV"));
+        Assertions.assertEquals("MCCXXXIV", RomanNumbersConverter.convertToRoman(1234));
     }
 
     @Test
     public void testConvertToRomanValueOneThousandFiveHundredFiftyFour(){
-        Assertions.assertEquals(1554, RomanNumbersConverter.convertToInteger("MDLIV"));
+        Assertions.assertEquals("MDLIV", RomanNumbersConverter.convertToRoman(1554));
     }
 
     @Test
     public void testConvertToRomanValueOneThousandNineHundredSeventySeven(){
-        Assertions.assertEquals(1977, RomanNumbersConverter.convertToInteger("MCMLXXVII"));
+        Assertions.assertEquals("MCMLXXVII", RomanNumbersConverter.convertToRoman(1977));
     }
 
     @Test
     public void testConvertToRomanValueTwoThousand(){
-        Assertions.assertEquals(2000, RomanNumbersConverter.convertToInteger("MM"));
+        Assertions.assertEquals("MM", RomanNumbersConverter.convertToRoman(2000));
     }
 
     @Test
     public void testConvertToRomanValueTwoThousandThreeHundredAndFortyFive(){
-        Assertions.assertEquals(2345, RomanNumbersConverter.convertToInteger("MM"));
+        Assertions.assertEquals("MM", RomanNumbersConverter.convertToRoman(2345));
     }
 
     @Test
     public void testConvertToRomanValueThreeThousand(){
-        Assertions.assertEquals(3000, RomanNumbersConverter.convertToInteger("MMM"));
+        Assertions.assertEquals("MMM", RomanNumbersConverter.convertToRoman(3000));
     }
 
     @Test
     public void testConvertToRomanValueThreeThousandNineHundredNinetyNine(){
-        Assertions.assertEquals(3999, RomanNumbersConverter.convertToInteger("MMMCMXCIX"));
+        Assertions.assertEquals("MMMCMXCIX", RomanNumbersConverter.convertToRoman(3999));
     }
 }
