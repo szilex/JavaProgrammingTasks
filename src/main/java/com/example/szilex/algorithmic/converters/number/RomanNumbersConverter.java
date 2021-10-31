@@ -26,7 +26,7 @@ public class RomanNumbersConverter {
         literalsToValuesMap.put("XL", 40);
         literalsToValuesMap.put("L", 50);
         literalsToValuesMap.put("LX", 60);
-        literalsToValuesMap.put("LXX", 60);
+        literalsToValuesMap.put("LXX", 70);
         literalsToValuesMap.put("LXXX", 80);
         literalsToValuesMap.put("XC", 90);
         literalsToValuesMap.put("C", 100);
@@ -49,7 +49,25 @@ public class RomanNumbersConverter {
     }
 
     public static String convertToRoman(int integerValue) {
+        StringBuilder result = new StringBuilder();
+        int multiplicator = 1000;
+        int remainder = integerValue;
 
-        return "";
+        while (remainder != 0) {
+            int value = remainder / multiplicator;
+            result.append(getRomanLiteral(value * multiplicator));
+            remainder %= multiplicator;
+            multiplicator /= 10;
+        }
+
+        return result.toString();
+    }
+
+    private static String getRomanLiteral(int value) {
+        return literalsToValuesMap.entrySet().stream()
+                .filter(entry -> entry.getValue().equals(value))
+                .map(Map.Entry::getKey)
+                .findFirst()
+                .orElse("");
     }
 }
