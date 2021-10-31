@@ -1,6 +1,8 @@
 package com.example.szilex.algorithmic.converters.number;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -8,7 +10,7 @@ import java.util.Map;
  * It is assumed that the values passed to the functions are correctly formatted and their value is in range <1,3999>
  */
 public class RomanNumbersConverter {
-    private static final Map<String, Integer> literalsToValuesMap = new HashMap<>();
+    private static final LinkedHashMap<String, Integer> literalsToValuesMap = new LinkedHashMap<>();
 
     static {
         literalsToValuesMap.put("I", 1);
@@ -44,8 +46,21 @@ public class RomanNumbersConverter {
     }
 
     public static int convertToInteger(String romanLiteral) {
-
-        return 0;
+        var entryList = new ArrayList<>(literalsToValuesMap.entrySet());
+        Collections.reverse(entryList);
+        int result = 0;
+        var iterator = entryList.listIterator();
+        while(iterator.hasNext()) {
+            var entry = iterator.next();
+            if (romanLiteral.startsWith(entry.getKey())) {
+                result += entry.getValue();
+                romanLiteral = romanLiteral.substring(entry.getKey().length());
+                if (iterator.hasPrevious()) {
+                    iterator.previous();
+                }
+            }
+        }
+        return result;
     }
 
     public static String convertToRoman(int integerValue) {
