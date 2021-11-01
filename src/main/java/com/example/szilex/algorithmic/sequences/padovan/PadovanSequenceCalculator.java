@@ -7,9 +7,25 @@ import java.math.BigInteger;
  */
 public class PadovanSequenceCalculator {
 
-    public static BigInteger getPadovanValue(int n) {
+    public static BigInteger getPadovanValue(long n) {
+        if (n==0 || n==1 || n==2) {
+            return BigInteger.ONE;
+        }
 
+        BigInteger[] previousValues = new BigInteger[]{
+                BigInteger.ONE,
+                BigInteger.ONE,
+                BigInteger.ONE
+        };
+        BigInteger result = BigInteger.ONE;
 
-        return BigInteger.ZERO;
+        for (int i = 3; i <= n; i++) {
+            result = previousValues[0].add(previousValues[1]);
+            previousValues[0] = previousValues[1];
+            previousValues[1] = previousValues[2];
+            previousValues[2] = result;
+        }
+
+        return result;
     }
 }
