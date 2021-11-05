@@ -61,6 +61,11 @@ public class ElementFinderTests {
     }
 
     @Test
+    public void testFindElementInCombinedSequenceIndexThreeThousandOneHundred() {
+        Assertions.assertEquals(2L, ElementFinder.findElementInCombinedSequence(3100L));
+    }
+
+    @Test
     public void testFindElementInCombinedSequenceIndexOneHundredTwentyThreeThousandFourHundredAndFiftySix() {
         Assertions.assertEquals(6L, ElementFinder.findElementInCombinedSequence(123456L));
     }
@@ -71,12 +76,17 @@ public class ElementFinderTests {
     }
 
     @Test
+    public void testFindElementInCombinedSequenceIndexTenToPowerEighteenMinusSeven() {
+        Assertions.assertEquals(7L, ElementFinder.findElementInCombinedSequence(999999999999999993L));
+    }
+
+    @Test
     public void testFindElementInCombinedSequenceIndexTenToPowerEighteenMinusOne() {
         Assertions.assertEquals(4L, ElementFinder.findElementInCombinedSequence(999999999999999999L));
     }
 
-    /*@Test
+    @Test
     public void testFindElementInCombinedSequenceIndexTenToPowerEighteen() {
         Assertions.assertEquals(1L, ElementFinder.findElementInCombinedSequence(1000000000000000000L));
-    }*/
+    }
 }
