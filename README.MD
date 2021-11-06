@@ -10,3 +10,4 @@ List of implemented tasks/exercises:
 - PinNumberGenerator: Find all possible PIN combinations based on the observed PIN - each observed number can be equal to this number or a number up, right, down or left to it
 - NumberPatternUtils: Find all non-strictly increasing and non-strictly decreasing values that are lower than 10 to the power of provided value
 - RomanNumberConverter: Convert roman literals to their integer value and vice versa
+- ElementFinder: Find elements/values in value sequences
