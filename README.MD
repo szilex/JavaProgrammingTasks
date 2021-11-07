@@ -11,3 +11,4 @@ List of implemented tasks/exercises:
 - NumberPatternUtils: Find all non-strictly increasing and non-strictly decreasing values that are lower than 10 to the power of provided value
 - RomanNumberConverter: Convert roman literals to their integer value and vice versa
 - ElementFinder: Find elements/values in value sequences
+- HammingNumberGenerator: Get n-th lowest Hamming number
