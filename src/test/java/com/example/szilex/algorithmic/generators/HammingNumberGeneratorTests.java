@@ -32,7 +32,7 @@ public class HammingNumberGeneratorTests {
 
     @Test
     public void testGenerateLowestHammingNumberIndexSix() {
-        Assertions.assertEquals(5L, HammingNumberGenerator.generateHammingNumber(6));
+        Assertions.assertEquals(6L, HammingNumberGenerator.generateHammingNumber(6));
     }
 
     @Test
