@@ -12,3 +12,4 @@ List of implemented tasks/exercises:
 - RomanNumberConverter: Convert roman literals to their integer value and vice versa
 - ElementFinder: Find elements/values in value sequences
 - HammingNumberGenerator: Get n-th lowest Hamming number
+- PadovanSequenceCalculator: Calculate n-th value in Padovan sequence
