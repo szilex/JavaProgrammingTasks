@@ -7,10 +7,11 @@ import java.math.BigInteger;
  */
 public class PadovanSequenceCalculator {
 
-    public static void main(String[] args) {
-        System.out.println(getPadovanValue(1000000));
-    }
-
+    /**
+     * Function for calculating n-th value in Padovan sequence
+     * @param n Index of the desired value in Padovan sequence
+     * @return n-th value in Padovan sequence
+     */
     public static BigInteger getPadovanValue(long n) {
         if (n==0 || n==1 || n==2) {
             return BigInteger.ONE;
@@ -27,6 +28,12 @@ public class PadovanSequenceCalculator {
         return resultPadovanMatrix[2][1];
     }
 
+    /**
+     * Function for calculating power of matrix
+     * @param matrix Square matrix to power
+     * @param exponent Amount of times matrix should be multiplied by itself
+     * @return Matrix powered to the value of exponent
+     */
     private static BigInteger[][] matrixPow(BigInteger[][] matrix, long exponent) {
         if (exponent == 1) return matrix;
 
@@ -57,7 +64,6 @@ public class PadovanSequenceCalculator {
                 }
             }
         }
-
         return result;
     }
 }
