@@ -13,3 +13,4 @@ List of implemented tasks/exercises:
 - ElementFinder: Find elements/values in value sequences
 - HammingNumberGenerator: Get n-th lowest Hamming number
 - PadovanSequenceCalculator: Calculate n-th value in Padovan sequence
+- IntervalsLengthCalculator: Calculate total length of all potentially overlapping intervals
